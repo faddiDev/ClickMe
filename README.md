@@ -11,4 +11,4 @@ Java Simple Game
   <li>run it: java ClickMe</li>
 </ul>
 
-Faddi&copy;Susanto
+Faddi Susanto&copy;2020
