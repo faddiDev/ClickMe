@@ -79,46 +79,22 @@ class ClickMe extends JFrame implements MouseListener, Runnable {
 		scores++;
 		score.setText("Score : " +Integer.toString(scores));
 		
-		if(scores == 10) {
-			try {
-				mypanel.remove(picLabel);
-				BufferedImage myPic = ImageIO.read(new File("DSC2.jpg"));
-				picLabel = new JLabel(new ImageIcon(myPic));
-				picLabel.setBounds(50,10,200,200);
-				mypanel.add(picLabel);
-				mypanel.revalidate();
-				mypanel.repaint();
-			} catch(Exception e) {}
-		} else if(scores == 20) {
-			try {
-				mypanel.remove(picLabel);
-				BufferedImage myPic = ImageIO.read(new File("DSC3.jpg"));
-				picLabel = new JLabel(new ImageIcon(myPic));
-				picLabel.setBounds(50,10,200,200);
-				mypanel.add(picLabel);
-				mypanel.revalidate();
-				mypanel.repaint();
-			} catch(Exception e) {}
-		} else if(scores == 30) {
-			try {
-				mypanel.remove(picLabel);
-				BufferedImage myPic = ImageIO.read(new File("DSC4.jpg"));
-				picLabel = new JLabel(new ImageIcon(myPic));
-				picLabel.setBounds(50,10,200,200);
-				mypanel.add(picLabel);
-				mypanel.revalidate();
-				mypanel.repaint();
-			} catch(Exception e) {}
-		} else if(scores == 40) {
-			try {
-				mypanel.remove(picLabel);
-				BufferedImage myPic = ImageIO.read(new File("DSC5.jpg"));
-				picLabel = new JLabel(new ImageIcon(myPic));
-				picLabel.setBounds(50,10,200,200);
-				mypanel.add(picLabel);
-				mypanel.revalidate();
-				mypanel.repaint();
-			} catch(Exception e) {}
+		String[] fileNames = {"DSC2.jpg", "DSC3.jpg", "DSC4.jpg", "DSC5.jpg"};
+		int score = 10;
+		
+		for(int i=0;i<4;i++) {
+			if(scores == score) {
+				try {
+					mypanel.remove(picLabel);
+					BufferedImage myPic = ImageIO.read(new File(fileNames[i]));
+					picLabel = new JLabel(new ImageIcon(myPic));
+					picLabel.setBounds(50,10,200,200);
+					mypanel.add(picLabel);
+					mypanel.revalidate();
+					mypanel.repaint();
+				} catch(Exception e) {}
+			}
+			score +=10;
 		}
 		
 	}
