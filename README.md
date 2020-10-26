@@ -11,6 +11,6 @@ Java Simple Game
   <li>Run it: java ClickMe</li>
 </ul>
 
-Check my video how to create from 0 to hero code : <a href="https://youtu.be/gf2jXt6bRHA">Java Q&A Game GUI on Youtube</a>
+Check my video how to create from 0 to hero code : <a href="https://youtu.be/SCbOviMd-c8">ClickMe on Youtube</a>
 
 Faddi Susanto&copy;2020
