@@ -82,9 +82,9 @@ class ClickMe extends JFrame implements MouseListener, Runnable {
 		String[] fileNames = {"DSC2.jpg", "DSC3.jpg", "DSC4.jpg", "DSC5.jpg"};
 		int score = 10;
 		
-		for(int i=0;i<4;i++) {
-			if(scores == score) {
-				try {
+		try {
+			for(int i=0;i<4;i++) {
+				if(scores == score) {
 					mypanel.remove(picLabel);
 					BufferedImage myPic = ImageIO.read(new File(fileNames[i]));
 					picLabel = new JLabel(new ImageIcon(myPic));
@@ -92,10 +92,10 @@ class ClickMe extends JFrame implements MouseListener, Runnable {
 					mypanel.add(picLabel);
 					mypanel.revalidate();
 					mypanel.repaint();
-				} catch(Exception e) {}
+				}
+				score +=10;
 			}
-			score +=10;
-		}
+		} catch(Exception e) {}
 		
 	}
 	
